@@ -1,19 +1,20 @@
-function replaceVowels(text, replacement) {
-    const vowels = ['a', 'e', 'i', 'o', 'u'];
-    let result = '';
-  
-    for (let i = 0; i < text.length; i++) {
-      if (vowels.includes(text[i])) {
-        result += replacement;
-      } else {
-        result += text[i];
-      }
-    }
-  
-    return result;
+function konsonan(teks){
+  let hasil = '';
+  if(typeof teks !== 'string'){
+    console.log('Tipe data teks harus string');
+    return;
   }
-  
-  const text = 'jakarta';
-  const replacement = 'o';
-  
-  console.log(replaceVowels(text, replacement)); // Output
+  for(let x = 0; x < teks.length; x++){
+    if(teks[x] == 'a'){
+      hasil = hasil + 'o';
+    } else{
+      hasil = hasil + teks[x];
+    }
+  }
+  console.log(hasil);
+}
+
+konsonan('surabaya');
+konsonan('malang');
+konsonan('bubur');
+konsonan(1);
